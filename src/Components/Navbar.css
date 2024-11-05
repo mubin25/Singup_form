@@ -1,0 +1,11 @@
+.navbar{
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid black;
+    background-color: bisque;
+    font-size: larger;
+    text-align: center;
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}

@@ -1,0 +1,33 @@
+*{
+  padding: 0;
+  margin: 0;
+  background-color: lightcyan;
+  box-sizing: border-box;
+}
+
+.form{
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid black;
+}
+.user-input{
+font-size: larger;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-style: italic;
+}
+.label{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: large;
+font-weight: bold;
+}
+.btn{
+  background-color: black;
+  border-radius: 10px;
+  height: 30px;
+  width: 60px;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  justify-content: center;
+}
