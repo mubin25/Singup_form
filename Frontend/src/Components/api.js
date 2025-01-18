@@ -9,3 +9,11 @@ export const submitData = (data) => {
 export const fetchData = () => {
     return axios.get(`${API_URL}/data`);
 };
+
+export const updateData = (id, updatedData) => {
+    return axios.put(`${API_URL}/api/data/${id}`, updatedData);
+};
+
+export const deleteData = (id) => {
+    return axios.delete(`${API_URL}/api/data/${id}`);
+};

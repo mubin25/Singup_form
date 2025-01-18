@@ -21,6 +21,7 @@ const FormDataSchema = new mongoose.Schema({
     name: String,
     email: String,
     message: String,
+    phone:Number,
 }, { timestamps: true });
 
 const FormData = mongoose.model('FormData', FormDataSchema);
@@ -45,6 +46,34 @@ app.get('/data', async (req, res) => {
         res.status(400).send('Error fetching data');
     }
 });
+
+// Update Route
+app.put('/api/data/:id', async (req, res) => {
+    const { id } = req.params;
+    const updatedData = req.body;
+
+    try {
+        const result = await FormData.findByIdAndUpdate(id, updatedData, { new: true });
+        res.status(200).json(result)
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to update data' });
+    }
+});
+
+// Delete data
+app.delete('/api/data/:id', async (req, res) => {
+    const { id } = req.params;
+//console.log(id)
+    try {
+        
+        const data =  await FormData.findByIdAndDelete(id);
+        console.log(data)
+        res.status(200).json({ message: 'Data deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to delete data' });
+    }
+});
+
 
 // Start the server
 const PORT = 5000;
