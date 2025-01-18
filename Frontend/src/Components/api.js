@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://singup-form.vercel.app/';
 
 export const submitData = (data) => {
     return axios.post(`${API_URL}/submit`, data);
