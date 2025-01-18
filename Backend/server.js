@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({origin: 'https://singup-form-387o.vercel.app'}));
 
 // Connect to MongoDB Atlas
 const uri = process.env.MONGO_URI;
