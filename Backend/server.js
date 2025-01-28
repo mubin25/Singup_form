@@ -12,7 +12,7 @@ app.use(cors());
 
 // Connect to MongoDB Atlas
 const uri = process.env.DATABASE_URL;
-// const uri = 'mongodb+srv://mubin9786:mubin9786@cluster0.73d76.mongodb.net';
+
 mongoose
   .connect(uri)
   .then(() => console.log('MongoDB Connected'))
